@@ -7,14 +7,16 @@ export class Dreieck extends Form {
     this._grundseite= _grundseite;
   }
 
-  berechneFlaecheDreieck(_radius: number) {
-    let _flaecheDreieck = ;
+  berechneFlaecheDreieck(_grundseite: number,_hoehe: number) {
+    let _flaecheDreieck : number;
+    _flaecheDreieck=0.5*_hoehe*_grundseite;
 
     return _flaecheDreieck;
   }
   toString(): string {
     let text: string = super.toString();
-    text += '\nRadius: ' + this._radius;
+    text += '\nGrundseite: ' + this._grundseite;
+    text += '\nHoehe: ' + this._hoehe;
     return text;
   }
 }
